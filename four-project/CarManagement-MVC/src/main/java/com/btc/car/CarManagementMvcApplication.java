@@ -1,0 +1,20 @@
+package com.btc.car;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
+
+@SpringBootApplication
+public class CarManagementMvcApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CarManagementMvcApplication.class, args);
+		System.out.println("hello varun");
+	}
+
+	@Bean
+	public RestTemplate getRestTemplate() {
+		return new RestTemplate();
+	}
+}
